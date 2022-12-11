@@ -149,24 +149,25 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("😁 𝗛𝗲𝘆 𝗙𝗿𝗶𝗲𝗻𝗱,𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝗿𝘀𝗲𝗹𝗳.", show_alert=True)
+        return await query.answer("😁 Hey Friend,Please Search Yourself", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("𝐋𝐢𝐧𝐤 𝐄𝐱𝐩𝐢𝐫𝐞𝐝 𝐊𝐢𝐧𝐝𝐥𝐲 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡 𝐀𝐠𝐚𝐢𝐧 🙂.", show_alert=True)
+        return await query.answer("Link Expired Kindly Search Once Again🙂.", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('𝙲𝙷𝙴𝙲𝙺𝙸𝙽𝙶 𝙵𝙸𝙻𝙴 𝙾𝙽 𝙼𝚈 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴...//')
-    k = await manual_filters(bot, query.message, text=movie)
-    if k == False:
+    await query.answer('Checking File On My Database...//')
+    sm = await manual_filters(bot, query.message, text=movie)
+    if sm == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
-            k = (movie, files, offset, total_results)
-            await auto_filter(bot, query, k)
+            sm = (movie, files, offset, total_results)
+            await auto_filter(bot, query, sm)
         else:
-            k = await query.message.edit("<b>Search The Correct Movie/Series Spelling In GOOGLE.COM \nThen Type In Our Group Once More ... \n\nPress only the Movie/Series name ONCE (without year) \n\nIf it doesn't respond please Type the movie/series name in @CentralLinks_Contactbot ... \n\nAdmin will try to add it soon</b>")
-            await asyncio.sleep(30)
-            await k.delete()
+            ss = await query.message.edit("<b>Search The Correct Movie/Series Spelling In GOOGLE.COM \nThen Type In Our Group Once More ... \n\nPress only the Movie/Series name ONCE (without year) \n\nEven after typing the correct speling. If it doesn't respond please Type the movie/series name in @CentralLinks_Contactbot ... \n\nAdmin will try to add it soon</b> 💌")
+            await asyncio.sleep(10)
+            await message.delete()                              
+            await ss.delete()
 
 
 @Client.on_callback_query()
@@ -787,10 +788,10 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        m = await msg.reply("I couldn't find any movie in that name.")
         await asyncio.sleep(10)
         await message.delete()
-        await k.delete()
+        await m.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -817,11 +818,10 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>I couldn't find anything related to that. Check your spelling OR Search in GOOGLE.COM \n\nPress only the Movie/Series name ONCE (without year)</b>")
-        if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
-            await message.delete()
-            await k.delete()
+        o = await msg.reply("<b>I couldn't find anything related to that.\nCheck your spelling with the help of GOOGLE.COM \n\nPress only the Movie/Series name ONCE (without year)</b>")
+        await asyncio.sleep(10)
+        await message.delete()
+        await o.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
@@ -831,12 +831,11 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    s = await msg.reply("<b>I couldn't find anything related to that. :( Check your spelling OR Search in GOOGLE.COM \n\nDid you mean any one of these? \n\nPress only the Movie/Series name ONCE (without year)</b>",
+    st = await msg.reply("<b>I couldn't find anything related to that.\nCheck your spelling with the help of GOOGLE.COM \nPress only the Movie/Series name ONCE (without year)\n\nDid you mean any one of these?</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
-    if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
-            await message.delete()
-            await s.delete()
+    await asyncio.sleep(10)
+    await message.delete()	        
+    await st.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
