@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '27321785'))
 API_HASH = environ.get('API_HASH', 'e73309ed8b9c95d7dc60a33a95b9a3c0')
-BOT_TOKEN = environ.get('BOT_TOKEN', "2107710484:AAHFQgzcOlFWovDZ3gu5fO0zCNqhbyLxBcU")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5986599997:AAE4jNe6zajFeCcmW-rxi0iiNFcSEHqsvqc")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -25,7 +25,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://graph.org/file/280c5e83f4ec2cf83a920.png')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '942140808').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1387656334').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001274359769 -1001635253104').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1021404718 1103583723').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
