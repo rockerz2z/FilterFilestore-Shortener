@@ -71,21 +71,21 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'shorturllink.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '45208ed765e534c47b1e267b8c0dfac7a8a0a1f4')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'tnlink.in')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'bfa604dd55a50e579d45089e700451bd38543b34)
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 120))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "⚡HOW TO DOWNLOAD⚡"
-DOWNLOAD_TEXT_URL = "https://t.me/central_tutorial/2"
+DOWNLOAD_TEXT_URL = "https://t.me/DeiEppudra/5"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "⚡UPDATES CHANNEL⚡"
-CAPTION_BUTTON_URL = "https://telegram.dog/central_links"
+CAPTION_BUTTON_URL = "https://telegram.dog/Rockerz2z"
 
    # Auto Delete For Bot Sending Files #
