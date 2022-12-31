@@ -14,26 +14,26 @@ class script(object):
     START_TXT = environ.get("START_TXT", """<b>Hello ... {} 👋
 ✯ My Name is <a href=https://telegram.dog/{}>{}</a>
 ✯ I Can Provide MOVIES,SERIES And Lot More
-✯ Don't Waste Your Time Looking To Add ME To Your Group , I'm Only For @CentralRequest
-✯ TEAM - @Central_Links</b>""")
+✯ Don't Waste Your Time Looking To Add ME To Your Group , I'm Only For @Rockerz2z
+✯ TEAM - @Rockerz2z</b>""")
     HELP_TXT = """<b>HEY {}
 Here Is The Help For My Channel</b>"""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://telegram.dog/central_links>Team CENTRAL LINKS</a>
+✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://telegram.dog/TeamR2X>Team ROCKERZ LINKS</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹.10
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
 ✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙺𝙾𝚈𝙴𝙱
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: V4.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Central Request is a open source project. 
-- Source - <a href=https://telegram.dog/Central_links>CLICK HERE</a>
+- Rockerz2z Request is a open source project. 
+- Source - <a href=https://telegram.dog/Rockerz2z>CLICK HERE</a>
 <b>DEVS:</b>
-- <a href=https://telegram.dog/thiyaku_17>Team CENTRAL LINKS</a>"""
+- <a href=https://telegram.dog/thiyaku_17>Team ROCKERZ LINKS</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
-- CENTRAL FILTER is the feature were users can get automated replies for a particular keyword and Central Filter will respond whenever a keyword is found the message
+- ROCKERZ FILTER is the feature were users can get automated replies for a particular keyword and Central Filter will respond whenever a keyword is found the message
 <b>NOTE:</b>
-1. CENTRAL FILTER should have admin privilege.
+1. ROCKERZ FILTER should have admin privilege.
 2. only ADMINS can add filters in a chat.
 3. alert buttons have a limit of 64 characters.
 <b>Commands and Usage:</b>
@@ -42,13 +42,13 @@ Here Is The Help For My Channel</b>"""
 • /del - <code>delete a specific filter in chat</code>
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
-- CENTRAL FILTER Supports both url and alert inline buttons.
+- ROCKERZ FILTER Supports both url and alert inline buttons.
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
 2. CENTRAL FILTER supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://telegram.dog/Central_links)</code>
+<code>[Button Text](buttonurl:https://telegram.dog/Rockerz2z)</code>
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
@@ -69,7 +69,7 @@ Here Is The Help For My Channel</b>"""
 • /connections - <code>list all your connections</code>"""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 <b>NOTE:</b>
-these are the extra features of CENTRAL FILTER
+these are the extra features of ROCKERZ FILTER
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specified user.</code>
 • /info  - <code>get information about a user.</code>
