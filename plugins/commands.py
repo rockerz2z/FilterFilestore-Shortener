@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('⚡UPDATES CHANNEL⚡', url='https://telegram.dog/central_links')
+                InlineKeyboardButton('⚡UPDATES CHANNEL⚡', url='https://telegram.dog/Rockerz2z')
             ],
             [
-                InlineKeyboardButton('⚡INVITE LINK⚡', url=f"https://telegram.dog/centralrequest"),
+                InlineKeyboardButton('⚡INVITE LINK⚡', url=f"https://telegram.dog/Rockerz2z"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -49,10 +49,10 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 Search Movies/Series', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('Main Channel 🎞', url='https://telegram.dog/central_links'),
-            InlineKeyboardButton('Request Group 🌏', url='https://telegram.dog/centralrequest')
+            InlineKeyboardButton('Main Channel 🎞', url='https://telegram.dog/Rockerz2z'),
+            InlineKeyboardButton('Request Group 🌏', url='https://telegram.dog/Rockerz2z')
             ],[
-            InlineKeyboardButton('Support 💁', url='https://telegram.dog/centrallinks_contactbot'),
+            InlineKeyboardButton('Support 💁', url='https://telegram.dog/Rockerzyy_bot'),
             InlineKeyboardButton('About ME ✨', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -86,7 +86,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://telegram.dog/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel [@Central_Links] to use this Bot! \n\nAfter joining press TRY AGAIN to get the files \n\nUnless You Join the Channel[@Central_Links],You Cannot get The Files**",
+            text="**Please Join My Updates Channel [@Rockerz2z] to use this Bot! \n\nAfter joining press TRY AGAIN to get the files \n\nUnless You Join the Channel[@Rockerz2z],You Cannot get The Files**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -95,10 +95,10 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 Search Movies/Series', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('Main Channel 🎞', url='https://telegram.dog/central_links'),
-            InlineKeyboardButton('Request Group 🌏', url='https://telegram.dog/centralrequest')
+            InlineKeyboardButton('Main Channel 🎞', url='https://telegram.dog/Rockerz2z'),
+            InlineKeyboardButton('Request Group 🌏', url='https://telegram.dog/Rockerz2z')
             ],[
-            InlineKeyboardButton('Support 💁', url='https://telegram.dog/centrallinks_contactbot'),
+            InlineKeyboardButton('Support 💁', url='https://telegram.dog/Rockerzyy_bot'),
             InlineKeyboardButton('About ME ✨', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -249,7 +249,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡UPDATES CHANNEL⚡', url='https://telegram.dog/central_links') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡UPDATES CHANNEL⚡', url='https://telegram.dog/Rockerz2z') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
