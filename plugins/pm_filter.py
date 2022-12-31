@@ -108,7 +108,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡HOW TO DOWNLOAD⚡", url='https://t.me/central_tutorial/2')
+            InlineKeyboardButton(text="⚡HOW TO DOWNLOAD⚡", url='https://t.me/DeiEppudra/5')
         ]
     )
 
@@ -403,7 +403,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://telegram.dog/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒\n\nJoin - @Central_Links To Get the Movies Or Series Files", show_alert=True)
+            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒\n\nJoin - @Rockerz2z To Get the Movies Or Series Files", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -436,10 +436,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔍 Search Movies/Series', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('🎞 Main Channel', url='https://t.me/central_links'),
-            InlineKeyboardButton('Request Group 🔗', url='https://t.me/centralrequest')
+            InlineKeyboardButton('🎞 Main Channel', url='https://t.me/Rockerz2z'),
+            InlineKeyboardButton('Request Group 🔗', url='https://t.me/Rockerz2z')
             ],[
-            InlineKeyboardButton('Support 💁', url='https://t.me/CentralLinks_Contactbot'),
+            InlineKeyboardButton('Support 💁', url='https://t.me/Rockerzyy_bot'),
             InlineKeyboardButton('About ME 📬', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -468,7 +468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/central_links'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/Rockerz2z'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -694,7 +694,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡HOW TO DOWNLOAD⚡", url='https://t.me/central_tutorial/2')
+            InlineKeyboardButton(text="⚡HOW TO DOWNLOAD⚡", url='https://t.me/Rockerz2z')
         ]
     )
 
@@ -745,7 +745,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Here is what i found for your query</b> `{search}` \n\n<b>🔗 Join : @Central_Links 🔗 ... \n\nTry To Forward This Message to Saved Messages or to our Friend \nIt will be deleted after 3 minutes</b>"
+        cap = f"<b>Here is what i found for your query</b> `{search}` \n\n<b>🔗 Join : @Rockerz2z 🔗 ... \n\nTry To Forward This Message to Saved Messages or to our Friend \nIt will be deleted after 3 minutes</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
