@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '27321785'))
-API_HASH = environ.get('API_HASH', 'e73309ed8b9c95d7dc60a33a95b9a3c0')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5986599997:AAE4jNe6zajFeCcmW-rxi0iiNFcSEHqsvqc")
+API_ID = int(environ.get('API_ID', '1305232'))
+API_HASH = environ.get('API_HASH', '71b917e302a36826c54988990dc7a789')
+BOT_TOKEN = environ.get('BOT_TOKEN', "2107710484:AAHFQgzcOlFWovDZ3gu5fO0zCNqhbyLxBcU")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -25,34 +25,34 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://graph.org/file/280c5e83f4ec2cf83a920.png')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1387656334').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1001660466640 -1001505006734")
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1387656334 1078638766').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '942140808').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001274359769 -1001635253104').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1021404718 1103583723').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001786743463')
-auth_grp = environ.get('AUTH_GROUP', '-1001821632842')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001858559628')
+auth_grp = environ.get('AUTH_GROUP', '-1001567813393')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rockerz2ktg:riyazkk2003@cluster0.jzchbww.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "cluster1")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Centralfilter2:centralfilter2@centralfilter2.bbapt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "centralfilter")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001830105584)
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'rockerz2z')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001749403188'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'centralrequest')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption}\n\n◤JOIN US ON TELEGRAM◢\n\nTEAM - @Rockerz2z\nREQUEST - @Rockerz2z\nCONTACT - @Rockerzyy_bot)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption}\n\n◤JOIN US ON TELEGRAM◢\n\nTEAM - @Central_Links\nREQUEST - @CentralRequest\nCONTACT - @CentralLinks_Contactbot</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: (<a href={url}/ratings>{rating}</a>/10)\n\n<b>Team : @Rockerz2z</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: (<a href={url}/ratings>{rating}</a>/10)\n\n<b>Team : @Central_Links</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001819521851]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001799400421')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
@@ -71,21 +71,21 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'tnlink.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'bfa604dd55a50e579d45089e700451bd38543b34)
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'shorturllink.in')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '45208ed765e534c47b1e267b8c0dfac7a8a0a1f4')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 120))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "⚡HOW TO DOWNLOAD⚡"
-DOWNLOAD_TEXT_URL = "https://t.me/DeiEppudra/5"
+DOWNLOAD_TEXT_URL = "https://t.me/central_tutorial/2"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "⚡UPDATES CHANNEL⚡"
-CAPTION_BUTTON_URL = "https://telegram.dog/Rockerz2z"
+CAPTION_BUTTON_URL = "https://telegram.dog/central_links"
 
    # Auto Delete For Bot Sending Files #
