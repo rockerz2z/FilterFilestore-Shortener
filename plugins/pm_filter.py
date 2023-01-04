@@ -164,7 +164,7 @@ async def advantage_spoll_choker(bot, query):
             sm = (movie, files, offset, total_results)
             await auto_filter(bot, query, sm)
         else:
-            ss = await query.message.edit("<b>Search The Correct Movie/Series Spelling In GOOGLE.COM \nThen Type In Our Group Once More ... \n\nPress only the Movie/Series name ONCE (without year) \n\nEven after typing the correct speling. If it doesn't respond please Type the movie/series name in @CentralLinks_Contactbot ... \n\nAdmin will try to add it soon</b> 💌")
+            ss = await query.message.edit("<b>Search The Correct Movie/Series Spelling In GOOGLE.COM \nThen Type In Our Group Once More ... \n\nPress only the Movie/Series name ONCE (without year) \n\nEven after typing the correct speling. If it doesn't respond please Type the movie/series name in @Rockerzyy_bot ... \n\nAdmin will try to add it soon</b> 💌")
             await asyncio.sleep(10)
             await message.delete()                              
             await ss.delete()
