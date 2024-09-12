@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '27321785'))
-API_HASH = environ.get('API_HASH', 'e73309ed8b9c95d7dc60a33a95b9a3c0')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5986599997:AAE4jNe6zajFeCcmW-rxi0iiNFcSEHqsvqc")
+API_ID = int(environ.get('API_ID', '2393757'))
+API_HASH = environ.get('API_HASH', '89f1050bae8e86a68c3e2278bcfbfc9b')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7310217905:AAGvFevznbhKHk69SYLhsMp3-nccKb6G5HY")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -25,12 +25,12 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://te.legra.ph/file/00c2b881ab6dd8680b232.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1387656334').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1078638766').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001660466640 -1001505006734').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1387656334 1078638766').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1078638766').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '-1001897773325')
-auth_grp = environ.get('AUTH_GROUP', '-1001821632842')
+auth_grp = environ.get('AUTH_GROUP', '-1002177626547')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
@@ -40,7 +40,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001830105584'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002206464807'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'rockerz2z')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
