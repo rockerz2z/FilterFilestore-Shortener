@@ -11,3 +11,4 @@ heroku3
 pynewtonmath
 pytz
 aiohttp
+pyrofork
