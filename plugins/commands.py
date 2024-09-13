@@ -247,9 +247,24 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/c/GreyMattersBot') ] ] ),
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/c/GreyMattersBot')]]
+        ),
         protect_content=True if pre == 'filep' else False,
-        )
+    )
+except pyrogram.errors.MediaEmpty:
+    print("Cached media failed. Sending media directly.")
+    
+    # Fallback to sending media directly if cached media fails
+    await client.send_document(
+        chat_id=message.from_user.id,
+        document=open(file_path, "rb"),  # Replace 'file_path' with the actual path to the media
+        caption=f_caption,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/c/GreyMattersBot')]]
+        ),
+        protect_content=True if pre == 'filep' else False,
+    )
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
