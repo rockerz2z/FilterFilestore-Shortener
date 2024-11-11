@@ -1,3 +1,4 @@
+git+https://github.com/Joelkb/cinemagoer
 pyrogram
 pyrofork==2.2.11
 tgcrypto
